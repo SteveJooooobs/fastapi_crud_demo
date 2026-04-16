@@ -1,4 +1,4 @@
-好的，我把整个会话中你提出的问题和关键注意事项整理成 QA 格式的 Markdown 笔记。
+API接口和SQLAlchemy知识库项目的笔记
 
 ---
 
@@ -12,12 +12,13 @@
 - 技术栈：FastAPI + SQLAlchemy + Pydantic V2 + MySQL
 - 功能：知识库的增删改查（Category 单级分类 + Knowledge 知识条目）
 
----
+```
 
 ## 一、环境配置相关
 
 ### Q1：.env 文件是做什么的？里面填充的内容只有这些吗？
 **A：** `.env` 文件用于本地存储敏感配置（如数据库密码、API 密钥），会被 `.gitignore` 忽略，不会上传到 GitHub。配置项包括：
+
 - `MYSQL_HOST`：数据库地址
 - `MYSQL_PORT`：数据库端口
 - `MYSQL_USER`：数据库用户名
@@ -44,6 +45,7 @@ class Settings(BaseSettings):
 ```
 
 ### Q3：配置文件中开头定义的默认值和 .env 文件的关系是什么？
+
 **A：** 读取优先级：**系统环境变量 > .env 文件 > 代码默认值**。
 - 代码中的默认值是"兜底"机制，当环境变量和 `.env` 都没有时才生效。
 - 注意：属性名必须全大写才能自动匹配同名的环境变量。
@@ -288,3 +290,5 @@ from app.models import Category, Knowledge
 ```
 
 ---
+作者：Mjolnir
+```
