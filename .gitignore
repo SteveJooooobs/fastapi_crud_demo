@@ -74,3 +74,5 @@ Desktop.ini
 
 # Project specific
 knowledge_base.db
+
+docker-compose.yml
